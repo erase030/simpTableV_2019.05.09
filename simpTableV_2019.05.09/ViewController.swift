@@ -39,21 +39,21 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goAdd" {
-            let addVC = segue.destination as! AddViewController
-            //addVC.testData = self.title
-            addVC.testData = animals[0]
-            addVC.imgData = "Cat"
-            addVC.nameData = detailAnimals[0]
-        }
-        else if segue.identifier == "goDetail"{
-            
-        }
-        else{
-            print("segue error")
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goAdd" {
+//            let addVC = segue.destination as! AddViewController
+//            //addVC.testData = self.title
+//            addVC.testData = animals[0]
+//            addVC.imgData = "Cat"
+//            addVC.nameData = detailAnimals[0]
+//        }
+//        else if segue.identifier == "goDetail"{
+//
+//        }
+//        else{
+//            print("segue error")
+//        }
+//    }
 
 
 }

@@ -64,7 +64,7 @@
                     <navigationItem key="navigationItem" title="동물농장" id="Aw1-4c-ZrZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="b9w-5F-hdh">
                             <connections>
-                                <segue destination="hXP-se-nJN" kind="show" identifier="goAdd" id="Ehj-oD-mtA"/>
+                                <segue destination="Cui-cS-wHS" kind="presentation" identifier="goAdd" id="Ehj-oD-mtA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="1044" y="275"/>
         </scene>
-        <!--Add View Controller-->
+        <!--새메모-->
         <scene sceneID="377-Yz-8tw">
             <objects>
                 <viewController id="hXP-se-nJN" customClass="AddViewController" customModule="simpTableV_2019_05_09" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,29 +84,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfX-wp-gr5">
-                                <rect key="frame" x="67" y="173" width="240" height="321"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-k1-C6t">
-                                <rect key="frame" x="67" y="542" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aR9-pH-fNj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sRF-cR-0rr" firstAttribute="bottom" secondItem="aR9-pH-fNj" secondAttribute="bottom" id="7Xd-Ch-qJB"/>
+                            <constraint firstItem="aR9-pH-fNj" firstAttribute="leading" secondItem="sRF-cR-0rr" secondAttribute="leading" id="NTm-WN-Vn7"/>
+                            <constraint firstItem="sRF-cR-0rr" firstAttribute="trailing" secondItem="aR9-pH-fNj" secondAttribute="trailing" id="avJ-Kq-sTS"/>
+                            <constraint firstItem="aR9-pH-fNj" firstAttribute="top" secondItem="sRF-cR-0rr" secondAttribute="top" id="e7j-dR-9hC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sRF-cR-0rr"/>
                     </view>
-                    <connections>
-                        <outlet property="imgV" destination="xfX-wp-gr5" id="ZYA-XU-XU9"/>
-                        <outlet property="lbl" destination="3tf-k1-C6t" id="P0t-2R-Nfa"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="새메모" id="DEb-WE-XbU">
+                        <barButtonItem key="leftBarButtonItem" title="취소" id="7uK-Jt-FKi">
+                            <connections>
+                                <action selector="clodr:" destination="hXP-se-nJN" id="VVV-1U-Z7N"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="JKc-C4-GSe"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izd-QR-vJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="-39.130434782608695"/>
+            <point key="canvasLocation" x="2839.1999999999998" y="-39.130434782608695"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="4pn-te-sSg">
@@ -140,6 +146,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlq-eE-Ia4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="246" y="275"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6TM-b8-cJ5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cui-cS-wHS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4yJ-k6-KXE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hXP-se-nJN" kind="relationship" relationship="rootViewController" id="m8q-Pu-Ywm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="835-s3-xEX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-39.130434782608695"/>
         </scene>
     </scenes>
 </document>

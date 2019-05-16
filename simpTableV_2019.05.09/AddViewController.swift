@@ -10,25 +10,17 @@ import UIKit
 
 class AddViewController: UIViewController {
     
-    var testData : String?
-    var imgData : String?
-    var nameData : String?
-    
-    @IBOutlet weak var imgV: UIImageView!
-    @IBOutlet weak var lbl: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        print(testData!)
-        self.title = testData
-        imgV.image = UIImage(named: imgData!)
+        // Do any additional setup after loading the view
         
     }
     
-
+    @IBAction func clodr(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
